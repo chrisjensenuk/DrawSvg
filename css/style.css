@@ -1,0 +1,13 @@
+body{
+	width:100%;
+	height:100%;
+}
+
+#board{
+	position:relative;
+	top:0px;
+	left:0px;
+	border:1px solid green;
+	width:600px;
+	height:600px;
+}
