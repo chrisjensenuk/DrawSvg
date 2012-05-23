@@ -79,7 +79,7 @@ define(
 			self.connectors.destroyAll();
 			self.markers.destroyAll();
 			
-			self.levelNo = levelNo;
+			self.levelNo = parseInt(levelNo);
 			
 			//save the arrangement of the level
 			self.arrangement = arrangement;
@@ -360,7 +360,7 @@ define(
 					
 					//move onto the next level
 					var nextLevel = self.levelNo + 1;
-					if(nextLevel = Constants.levelCount) nextLevel = 0;
+					if(nextLevel == Constants.levelCount) nextLevel = 0;
 					var route = "level/" + nextLevel;
 					self.navigate(route, {trigger: true});
                 }
