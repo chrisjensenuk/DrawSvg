@@ -1,0 +1,1 @@
+define(["nodeview"],function(a){var b=a.extend({cursorDown:function(a){this.model.get("board").connectorStart(this.model)}});return b})

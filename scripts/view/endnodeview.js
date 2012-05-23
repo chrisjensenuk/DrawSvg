@@ -1,0 +1,1 @@
+define(["nodeview"],function(a){var b=a.extend({cursorUp:function(a){this.model.get("board").connectorEnd(this.model)&&(a.stopPropagation(),a.preventDefault())}});return b})

@@ -1,0 +1,1 @@
+define(["backbone","connectorcoordinate"],function(a,b){var c=a.Collection.extend({model:b});return c})

@@ -1,0 +1,1 @@
+define(["node"],function(a){var b={tryConnectorEnd:function(a){return a.coords.add({x:this.get("x"),y:this.get("y")}),a.set("endNode",this),this.endConnectors.add(a),!0}};return b})

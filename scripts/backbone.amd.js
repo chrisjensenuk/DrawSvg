@@ -1,0 +1,1 @@
+define(["order!underscore","order!jquery","order!backbone-min"],function(){return _.noConflict(),$.noConflict(),Backbone.noConflict()})

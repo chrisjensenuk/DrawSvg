@@ -1,0 +1,1 @@
+define(["endnodeview"],function(a){var b=a.extend();return b})

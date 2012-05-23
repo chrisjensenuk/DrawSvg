@@ -1,0 +1,1 @@
+define(["backbone"],function(a){return{boardWidth:600,boardHeight:600,releaseRate:200,spriteStepIncrement:1,timeout:1,levelCount:4,nodeFillColor:"#F25C05",nodeStrokeColor:"#F25C05",endNodeFillColor:"#CCCCCC",endNodeStrokeColor:"#CCCCCC",connectorStrokeColor:"#F25C05",flipFlopDeactiveColor:"#F2B28A",drawnConnectorColor:"#93A605",nodeHighlightColor:"#FFE303"}})
