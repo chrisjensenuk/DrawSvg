@@ -15,6 +15,9 @@ define(['backbone'], function(Backbone){
 		//milliseconds to wait before incrementing
 		timeout: 1,
 		
+		//number of levels
+		levelCount: 4,
+		
 		//colours
 		nodeFillColor: "#F25C05",
 		nodeStrokeColor: "#F25C05",

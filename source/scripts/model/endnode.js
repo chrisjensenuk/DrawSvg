@@ -25,6 +25,8 @@ define(["underscore", "node", "nodeconnectorendmixin", "sprites", "constants"], 
 					this.set("highlight", true);
 				}
 			}, this);
+			
+			//if we are no longer joining a connector then clear the highlight
 			board.dispatcher.on("connectorEnded connectorCancelled", function(){ this.set("highlight", false);}, this);
 			
 			//If the board says that the sprites have finished then validate
@@ -68,7 +70,7 @@ define(["underscore", "node", "nodeconnectorendmixin", "sprites", "constants"], 
 		validateFinishedSprites: function(){
 			var self = this;
 			
-			var valid = function(){
+			var valid = (function(){
 				//if we don't have enough sprites then it isn't valid
 				if(self.finishedSprites.length != self.get("expecting").length) return false;
 			
@@ -77,7 +79,7 @@ define(["underscore", "node", "nodeconnectorendmixin", "sprites", "constants"], 
 					if(self.finishedSprites.at(i).get("fill") != self.get("expecting")[i]) return false;
 				}
 				return true;
-			}();
+			})();
 			
 			if(valid == false) self.get("board").finishedSpritesAreValid = false;
 		}

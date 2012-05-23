@@ -55,7 +55,6 @@ require.config({
 
 define(["order!jquery", "order!raphael", "order!underscore", "order!backbone", "boardview", "approuter"],
 	function($, Raphael, _, Backbone, BoardView){
-
-			
+	
 	}
 );

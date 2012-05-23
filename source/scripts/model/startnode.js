@@ -15,13 +15,6 @@ define(["underscore", "backbone", "node", "sprites", "nodeconnectorstartmixin"],
 			board.dispatcher.on("releaseSprite", this.releaseSprite, this);
         },
 		
-		destroy: function(){
-			//stop listening to events so can clean up.
-			this.get("board").dispatcher.off(null, null, this);
-			
-			return Backbone.Model.prototype.destroy.call(this);
-		},
-		
 		//Add the starting markers for the sprites
 		addStartSpriteMarkers: function(){
 			var startingSpriteFills = this.get("starting");

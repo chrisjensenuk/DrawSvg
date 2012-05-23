@@ -22,6 +22,14 @@ define(["backbone", "constants", "connectors", "sprites"], function(Backbone, Co
             this.endConnectors = new Connectors();
 			
         },
+		
+		destroy: function(){
+			//stop listening to events so can clean up.
+			var board = this.get("board");
+			if(board != null) board.dispatcher.off(null, null, this);
+			
+			return Backbone.Model.prototype.destroy.call(this);
+		},
         
         activeStartConnector: function(){
             return this.startConnectors.first();

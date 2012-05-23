@@ -14,11 +14,10 @@ define(
 	'sprite',
 	'sprites',
 	'spriteview',
-	'startbuttonview',
-	'approuter'
+	'startbuttonview'
 	], 
 	
-	function(_, Backbone, Raphael, $, Constants,  Node, Nodes, NodeView, Connector, Connectors, ConnectorView, Sprite, Sprites, SpriteView, StartButtonView, AppRouter){
+	function(_, Backbone, Raphael, $, Constants,  Node, Nodes, NodeView, Connector, Connectors, ConnectorView, Sprite, Sprites, SpriteView, StartButtonView){
 	
 	//this the the connector that is currently being drawn
 	var tmpConnectorView = null;
@@ -71,7 +70,7 @@ define(
             },
         },
 		
-		load: function(arrangement){
+		load: function(arrangement, levelNo){
 			var self = this;
 			
 			//clear out the last level
@@ -79,6 +78,8 @@ define(
 			self.nodes.destroyAll();
 			self.connectors.destroyAll();
 			self.markers.destroyAll();
+			
+			self.levelNo = levelNo;
 			
 			//save the arrangement of the level
 			self.arrangement = arrangement;
@@ -358,9 +359,10 @@ define(
                     alert("You Win!");
 					
 					//move onto the next level
-					var nextLevel = AppRouter.levelId++;
+					var nextLevel = self.levelNo + 1;
+					if(nextLevel = Constants.levelCount) nextLevel = 0;
 					var route = "level/" + nextLevel;
-					AppRouter.navigate(route, {trigger: true});
+					self.navigate(route, {trigger: true});
                 }
                 else{
                     alert("You Lose!");
