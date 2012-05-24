@@ -199,7 +199,7 @@ define(
 
 		//handles touchend event. locates the position the touchend happened and if there is a node then calls connectorEnd
         touchEnd: function(e) {
-            
+			
             if (tmpConnectorView == null) return;
 
             var pageX = e.originalEvent.changedTouches[0].clientX;
@@ -209,11 +209,12 @@ define(
             var y = pageY - this.offset.top;
 
             var shape = this.paper.getElementByPoint(x, y);
-
+			
             if (shape == null || shape.node.id == null) return;
-
+			
+			
             var node = this.nodes.find(function(n) {
-                return n.id == shape.node.id
+                return n.get("nodeId") == shape.node.id
             });
 
 			if(this.connectorEnd(node)){

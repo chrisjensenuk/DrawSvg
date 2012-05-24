@@ -35,7 +35,7 @@ define(['constants', 'jquery', 'backbone'], function(Constants, $, Backbone){
                 r: this.model.get("r")
             });
 
-            this.shape.node.id = this.model.get("id");
+            this.shape.node.id = this.model.get("nodeId");
 			
 			this.glow = this.shape.glow({
 				color: Constants.nodeHighlightColor,
