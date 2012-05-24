@@ -202,16 +202,12 @@ define(
 			
             if (tmpConnectorView == null) return;
 
-            var pageX = e.originalEvent.changedTouches[0].clientX;
-            var pageY = e.originalEvent.changedTouches[0].clientY;
-
-            var x = pageX - this.offset.left;
-            var y = pageY - this.offset.top;
+            var x = e.originalEvent.changedTouches[0].clientX;
+            var y = e.originalEvent.changedTouches[0].clientY;
 
             var shape = this.paper.getElementByPoint(x, y);
 			
             if (shape == null || shape.node.id == null) return;
-			
 			
             var node = this.nodes.find(function(n) {
                 return n.get("nodeId") == shape.node.id
