@@ -10,7 +10,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 
-    <title>Drawsvg</title>
+    <title>DrawSvg</title>
   </head>
 
   <body>
@@ -20,7 +20,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/chrisjensenuk/DrawSvg">View on GitHub</a>
 
-          <h1 id="project_title">Drawsvg</h1>
+          <h1 id="project_title">DrawSvg</h1>
           <h2 id="project_tagline"></h2>
 
             <section id="downloads">
@@ -33,17 +33,64 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Drawsvg Game... Experiments with javascript, svg and touch.</h3>
-		
+        
+	
 		<div id="board"></div>
 
-		<a href="#level/0">Level 0</a> 
-		<a href="#level/1">Level 1</a> 
-		<a href="#level/2">Level 2</a> 
-		<a href="#level/3">Level 3</a> 
+		<a href="#level/0">Level 1</a> | 
+		<a href="#level/1">Level 2</a> | 
+		<a href="#level/2">Level 3</a> | 
+		<a href="#level/3">Level 4</a> 
+		
+		<h3>Instructions</h3>
+	<p>
+	Get the balls from the top to the bottom so they arrive in the correct order.
+	</p>
+	
+	<p>
+	Connect the orange nodes to the grey ones by drawing a line between them.  A node can only ever have one path connected to it.
+	</p>
+	
+	<p>
+	When you are ready click the green box to start the release of the balls
+	</p>
+	
+	<p>
+	You can delete a path by clicking/touching it.  You can restart the balls by clicking the green box.
+	</p>
+	
+	<p>
+	Tested on iPad & Chrome.
+	</p>
 
+	<h3>Technologies/Libraries</h3>
+	
+	<p>
+	Uses HTML & JavaScript & SVG
+	<ul>
+	   <li><a href="http://underscorejs.org/">Underscore.js</a></li>
+	   <li><a href="http://documentcloud.github.com/backbone/">Backbone.js</a></li>
+	   <li><a href="http://raphaeljs.com/">Raphael</a></li>
+	   <li><a href="http://requirejs.org/">RequireJS</a></li>
+	   <li><a href="http://jquery.com/">jQuery</a></li>
+	</ul>
+	</p>
+	
+	<p>
+	Source code is available on GitHub and is licenced under MIT.
+	</p>
+	
+	<h3>Background</h3>
+	<p>
+	I had an idea for a touch based game where you could draw paths and the longer you drew a path the longer it would take something to step along it.  
+	I couldn't work out whether this would be an interesting concept for a game so I decided to build it to find out.  
+	I still don't know whether it works as a game (<a href="http://twitter.com/chrisjensenuk">let me know</a>) but it was a good excuse to have a play with an iPad and some client side libraries I didn't know.
+	</p>
+	
 </section>
     </div>
+	
+	
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
