@@ -66,7 +66,7 @@ see http://requirejs.org/docs/optimization.html for require.js optimisation info
 
 
 
-MIT Licence
+MIT License
 ===========
 
 Copyright (c) 2012 Christian Jensen
