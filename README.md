@@ -9,12 +9,12 @@ PLAY THE GAME
 
 Glossary
 ========
-Arrangement - The layout of a game level
-Node - the 'node' where a Connector can start from or end at
-Connector - Connects 2 nodes together. Can be specified in the Arrangment or be drawn by the user
-Path - the shape of the Connector
-Sprite - The ball that moves down the Connectors
-Marker - Defines the start and end positions of a Sprite
+Arrangement - The layout of a game level  
+Node - the 'node' where a Connector can start from or end at  
+Connector - Connects 2 nodes together. Can be specified in the Arrangment or be drawn by the user  
+Path - the shape of the Connector  
+Sprite - The ball that moves down the Connectors  
+Marker - Defines the start and end positions of a Sprite  
 
 Architecture
 ============
@@ -54,7 +54,7 @@ Raphael.js, Underscore.js and Backbone.js require a little bit of work to 'ninja
 
 Instructions on minfying/optimising the javascript files (Windows)
 ==================================================================
-As each Module is in its own file its best to compact these down into a few files for optimization.  RequireJS 
+As each Module is in its own file its best to compact these down into a few files for optimization.  RequireJS provides a node.js based tool to do this.
 
 I'm using Windows so these instructions are for this platform.
 see http://requirejs.org/docs/optimization.html for require.js optimisation info
