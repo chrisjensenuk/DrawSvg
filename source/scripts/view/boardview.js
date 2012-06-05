@@ -197,7 +197,7 @@ define(
             connector.set("pointPath", pointPath.path);
         },
 
-		//handles touchend event. locates the position the touchend happened and if there is a node then calls connectorEnd
+		//handles touchend event. locates the position where the touchend happened and if there is a node then calls connectorEnd
         touchEnd: function(e) {
 			
             if (tmpConnectorView == null) return;
@@ -207,12 +207,12 @@ define(
 
             var shape = this.paper.getElementByPoint(x, y);
 			
-            if (shape == null || shape.node.id == null) return;
+            if (shape == null || shape.node.id == "") return;
 			
             var node = this.nodes.find(function(n) {
                 return n.get("nodeId") == shape.node.id
             });
-
+			
 			if(this.connectorEnd(node)){
 				e.stopPropagation();
 				e.preventDefault();
