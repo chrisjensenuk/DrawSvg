@@ -5,7 +5,7 @@ An exploration of JavaScript libraries, SVG & touch.
 
 PLAY THE GAME
 =============
-[Play the game](http://chrisjensenuk.github.com/DrawSvg)
+[Play the game](http://chrisjensenuk.github.io/DrawSvg)
 
 Glossary
 ========
